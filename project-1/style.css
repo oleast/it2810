@@ -6,6 +6,7 @@ body {
   font-family: 'Jaldi', sans-serif;
 	font-family: sans-serif;
 	font-weight: bold;
+	padding: 2rem;
 }
 
 .nosupport {
@@ -17,6 +18,9 @@ body {
 	background-color: white;
 	color: #5d5d5d;
 	padding: 1.5em;
+	box-sizing: border-box;
+  box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 2px;
 }
 
 .top-content {
@@ -25,6 +29,7 @@ body {
 
 #main-picture {
 	max-width: 100%;
+	max-height: 100%;
 }
 
 .earth-picture {
@@ -35,13 +40,18 @@ body {
 .earth-picture-card {
 	background-color: white;
 	padding: 1rem;
-	max-width: 32rem;
+	max-width: 34rem;
+	min-height: 1rem;
+	box-sizing: border-box;
+  box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 2px;
 }
 
 .earth-picture-container {
 	display: flex;
 	justify-content: space-between;
 	align-content: center;
+	align-items: flex-start;
 	flex-wrap: wrap;
 	margin: -1em 0 0 0;
 }
@@ -66,6 +76,14 @@ body {
   display: block;
   user-select: none;
   cursor: default;
+}
+
+.button-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	margin: 3rem;
 }
 
 .buttonContent {
