@@ -8,19 +8,19 @@
 }
 
 h1 {
-	color: rgb(17, 196, 254); 
+	color: #00bfc0; 
 	font-family: "MV Boli";
 }
 a {
 	text-decoration:none;
 }
 a:hover {
-	color:rgb(17, 196, 254);
+	color:#00bfc0;
 }
 h3 {
 	font-size: 30px;
 	font-family: "MV Boli";
-	color:rgb(17, 196, 254);
+	color:#00bfc0;
 }
 
 body {
@@ -34,6 +34,7 @@ body {
 
 .container {
 	padding: 2rem;
+	min-height: 100vh;
 }
 
 .nosupport {
@@ -104,6 +105,11 @@ body {
 	margin-top: 3em;
 }
 
+#footer {
+	background-color: #5d5d5d;
+	min-height: 10rem;
+}
+
 .button {
   background: #0060a3;
   border: 3px solid #0060a3;
@@ -166,7 +172,7 @@ body {
 	top:0;
 	height:50px; 
 	overflow: hidden;
-	border-bottom:2px rgb(17, 196, 254) solid;
+	border-bottom:2px #00bfc0 solid;
 	background-color:white; 
 	z-index:100;
 	grid-template-columns:1% 8% auto 60% 1% ;

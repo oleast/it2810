@@ -61,6 +61,8 @@ let main = (event) => {
     document.getElementById('load-more-pictures').addEventListener('click', fetchAndRender)
     activateSmoothScroll(document.getElementById('pictures-anchor-button'), document.getElementById('pictures'))
     activateSmoothScroll(document.getElementById('description-anchor-button'), document.getElementById('main'))
+    activateSmoothScroll(document.getElementById('footer-anchor-button'), document.getElementById('footer'))
+    activateSmoothScroll(document.getElementById('top-anchor-button'), document.getElementById('main-picture'))
     activateSmoothScroll(document.getElementById('logo'), document.getElementById('main-picture'))
     fetchAndRender()
 }
