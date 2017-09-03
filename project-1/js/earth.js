@@ -12,7 +12,6 @@ let renderPictures = (pictures) => {
             type: 'div',
             className: 'earth-picture-card'
         })
-        console.log(picture.title)
         let title = new Element({
             type: 'p',
             inner: picture.title,
@@ -48,9 +47,22 @@ let fetchAndRender = (API) => {
     })
 }
 
+let activateSmoothScroll = (trigger, destination) => {
+    trigger.addEventListener('click', () => {
+        window.scrollTo({
+            'behavior': 'smooth',
+            'left': 0,
+            'top': destination.offsetTop
+          })
+    })
+}
+
 let main = (event) => {
     document.getElementById('load-more-pictures').addEventListener('click', fetchAndRender)
-    fetchAndRender(earthAPI)
+    activateSmoothScroll(document.getElementById('pictures-anchor-button'), document.getElementById('pictures'))
+    activateSmoothScroll(document.getElementById('description-anchor-button'), document.getElementById('main'))
+    activateSmoothScroll(document.getElementById('logo'), document.getElementById('main-picture'))
+    fetchAndRender()
 }
 
 class Element {
@@ -71,7 +83,7 @@ class Element {
         if (this.inner) { element.innerHTML = this.inner }
         let node = parent.appendChild(element)
         children.forEach((child) => {
-            child.render(node, [])
+            child.render(node)
         })
     }
 }
@@ -92,18 +104,16 @@ class APIQueryer {
         return new Promise((resolve, reject) => {
             const query = this.createQuery()
             console.log(query)
-            fetch(query, {
-                method: 'get',
-            }).then((res) => { return res.json() })
-            .then(({data}) => {
-                //const latestId = data.children[data.children.length-1].data.id
-                const latestId = data.after
-                this.updatePrevious(latestId)
-                resolve(data.children)
-            }).catch((err) => {
-                console.error(err)
-                reject(err)
-            })
+            fetch(query)
+                .then((res) => { return res.json() })
+                .then(({data}) => {
+                    const after = data.after
+                    this.updatePrevious(after)
+                    resolve(data.children)
+                }).catch((err) => {
+                    console.error(err)
+                    reject(err)
+                })
         })
     }
 
@@ -115,4 +125,4 @@ class APIQueryer {
 let earthAPI = new APIQueryer(PICTURE_API_BASE, PICTURE_API_URL, PICTURE_API_LIMIT)
 
 // Initialize the  main JavaScript
-document.addEventListener("DOMContentLoaded", main(event))
+document.addEventListener("DOMContentLoaded", main())

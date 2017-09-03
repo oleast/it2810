@@ -1,4 +1,28 @@
 
+* {
+	margin: auto 0;
+	line-height: 1.4;
+  font-family: 'Jaldi', sans-serif;
+	font-family: sans-serif;
+	font-weight: bold;
+}
+
+h1 {
+	color: rgb(17, 196, 254); 
+	font-family: "MV Boli";
+}
+a {
+	text-decoration:none;
+}
+a:hover {
+	color:rgb(17, 196, 254);
+}
+h3 {
+	font-size: 30px;
+	font-family: "MV Boli";
+	color:rgb(17, 196, 254);
+}
+
 body {
 	background :#f0f0f0;
 	font-size: 17px; 
@@ -6,6 +30,9 @@ body {
   font-family: 'Jaldi', sans-serif;
 	font-family: sans-serif;
 	font-weight: bold;
+}
+
+.container {
 	padding: 2rem;
 }
 
@@ -28,8 +55,25 @@ body {
 }
 
 #main-picture {
+	position: relative;
 	max-width: 100%;
 	max-height: 100%;
+	min-width: 100%;
+	z-index: -100;
+}
+
+#main-arrow {
+	transform: rotate(90deg);
+	position: absolute;
+	margin-top: 1em;
+	z-index: 2;
+}
+
+.main-picture-container {
+	position: relative;
+	max-width: 100%;
+	max-height: 100%;
+	min-width: 100%;
 }
 
 .earth-picture {
@@ -112,4 +156,66 @@ body {
   width: 2rem;
   margin-right: 0.5rem;
 }
+
+/* Navbar style */
+
+.header {
+	position:fixed;
+	display: grid;
+	width:100%; 
+	top:0;
+	height:50px; 
+	overflow: hidden;
+	border-bottom:2px rgb(17, 196, 254) solid;
+	background-color:white; 
+	z-index:100;
+	grid-template-columns:1% 8% auto 60% 1% ;
+	
+}
+#logo {
+	display: -webkit-flex;
+	display:flex;
+	align-items:center;
+	height:100%;
+	width:100%;
+	grid-column-start:2;
+	grid-column-end: 3;	
+}
+#logo-text {
+	font-size:25px;
+	flex:1;
+}
+#logo-img {
+	height:40px;
+	max-width:30px;
+	margin-right:10px;
+	flex:1;
+	-webkit-flex:1;
+}
+.navigation {
+	grid-column-start:4;
+	grid-column-end: 5;
+	height:100%;
+    	display: flex;
+	display: -webkit-flex;
+	flex-wrap: wrap;
+	-webkit-flex-wrap: wrap;
+	flex-direction: row-reverse;
+	-webkit-flex-direction: row-reverse;
+}
+.navigation-text {
+	font-size: 17px;
+
+}
+.navigation-element {
+	display:flex;
+	display: -webkit-flex;
+	padding-left:2%;
+	padding-right:2%;
+	align-items:center;
+	height:100%;
+	}
+.navigation-element:hover {
+	background-color:#f7f7ff;
+	}
 
