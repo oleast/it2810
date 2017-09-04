@@ -2,14 +2,14 @@
 * {
 	margin: auto 0;
 	line-height: 1.4;
-  font-family: 'Jaldi', sans-serif;
+	font-family: 'Jaldi', sans-serif;
 	font-family: sans-serif;
 	font-weight: bold;
 }
 
 h1 {
 	color: #00bfc0; 
-	font-family: "MV Boli";
+	font-family: 'Source Sans Pro', sans-serif;
 }
 a {
 	text-decoration:none;
@@ -19,7 +19,7 @@ a:hover {
 }
 h3 {
 	font-size: 30px;
-	font-family: "MV Boli";
+	font-family: 'Source Sans Pro', sans-serif;
 	color:#00bfc0;
 }
 
@@ -27,7 +27,7 @@ body {
 	background :#f0f0f0;
 	font-size: 17px; 
 	line-height: 1.4;
-  font-family: 'Jaldi', sans-serif;
+	font-family: 'Jaldi', sans-serif;
 	font-family: sans-serif;
 	font-weight: bold;
 }
@@ -38,7 +38,7 @@ body {
 }
 
 .nosupport {
-  text-align: center;
+	text-align: center;
 }
 
 .top {
@@ -47,8 +47,8 @@ body {
 	color: #5d5d5d;
 	padding: 1.5em;
 	box-sizing: border-box;
-  box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.25);
-  border-radius: 2px;
+	box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.25);
+	border-radius: 2px;
 }
 
 .top-content {
@@ -88,8 +88,8 @@ body {
 	max-width: 34rem;
 	min-height: 1rem;
 	box-sizing: border-box;
-  box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.25);
-  border-radius: 2px;
+	box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.25);
+	border-radius: 2px;
 }
 
 .earth-picture-container {
@@ -111,21 +111,21 @@ body {
 }
 
 .button {
-  background: #0060a3;
-  border: 3px solid #0060a3;
-  box-sizing: border-box;
-  box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.25);
-  border-radius: 2px;
-  width: 100%;
-  max-width: 24rem;
-  padding: 0.5rem 1.5rem;
-  color: white;
-  font-weight: bold;
-  font-size: 1.3rem;
-  transition: 0.2s;
-  display: block;
-  user-select: none;
-  cursor: default;
+	background: #0060a3;
+	border: 3px solid #0060a3;
+	box-sizing: border-box;
+	box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.25);
+	border-radius: 2px;
+	width: 100%;
+	max-width: 24rem;
+	padding: 0.5rem 1.5rem;
+	color: white;
+	font-weight: bold;
+	font-size: 1.3rem;
+	transition: 0.2s;
+	display: block;
+	user-select: none;
+	cursor: default;
 }
 
 .button-container {
@@ -137,91 +137,93 @@ body {
 }
 
 .buttonContent {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 
 .button:hover {
-  background: #005093;
-  color: #f2f2f2;
+	background: #005093;
+	color: #f2f2f2;
 }
 
 .button:active, button.active {
-  background: #ffffff;
-  color: #0060a3;
+	background: #ffffff;
+	color: #0060a3;
 }
 
 .button:disabled {
-  background: #f2f2f2;
-  border: 3px solid transparent;
-  color: #c0c0c0;
+	background: #f2f2f2;
+	border: 3px solid transparent;
+	color: #c0c0c0;
 }
 
 .iconLeft {
-  width: 2rem;
-  margin-right: 0.5rem;
+	width: 2rem;
+	margin-right: 0.5rem;
 }
 
 /* Navbar style */
 
 .header {
-	position:fixed;
+	position: fixed;
 	display: grid;
-	width:100%; 
-	top:0;
-	height:50px; 
+	width: 100%; 
+	top: 0;
+	height: 3rem; 
 	overflow: hidden;
-	border-bottom:2px #00bfc0 solid;
-	background-color:white; 
-	z-index:100;
-	grid-template-columns:1% 8% auto 60% 1% ;
+	border-bottom: 2px #00bfc0 solid;
+	background-color: white; 
+	z-index: 100;
+	grid-template-columns: 1% 8% auto 60% 1% ;
 	
 }
 #logo {
 	display: -webkit-flex;
-	display:flex;
-	align-items:center;
-	height:100%;
-	width:100%;
-	grid-column-start:2;
+	display: flex;
+	align-items: center;
+	height: 100%;
+	width: 100%;
+	grid-column-start: 2;
 	grid-column-end: 3;	
 }
 #logo-text {
-	font-size:25px;
-	flex:1;
+	font-size: 2rem;
+	flex: 1;
 }
 #logo-img {
-	height:40px;
-	max-width:30px;
-	margin-right:10px;
-	flex:1;
-	-webkit-flex:1;
+	height: 2.5rem;
+	max-width: 2rem;
+	margin-right: 1rem;
+	flex: 1;
+	-webkit-flex: 1;
 }
 .navigation {
-	grid-column-start:4;
+	grid-column-start: 4;
 	grid-column-end: 5;
-	height:100%;
-    	display: flex;
+	height: 100%;
+    display: flex;
 	display: -webkit-flex;
 	flex-wrap: wrap;
 	-webkit-flex-wrap: wrap;
 	flex-direction: row-reverse;
 	-webkit-flex-direction: row-reverse;
 }
-.navigation-text {
-	font-size: 17px;
 
+.navigation-text {
+	font-size: 1.2rem;
 }
+
 .navigation-element {
-	display:flex;
+	display: flex;
 	display: -webkit-flex;
-	padding-left:2%;
-	padding-right:2%;
-	align-items:center;
-	height:100%;
-	}
+	padding-left: 2%;
+	padding-right: 2%;
+	align-items: center;
+	height: 100%;
+}
+
 .navigation-element:hover {
 	background-color:#f7f7ff;
-	}
+}
 

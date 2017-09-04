@@ -1,13 +1,12 @@
 
 // Define constants
-const PICTURE_API_LIMIT = 3
+const PICTURE_API_LIMIT = 6
 const PICTURE_API_BASE = 'https://www.reddit.com'
 const PICTURE_API_URL = '/r/earthporn/top.json'
 const LOADING_GIF_URL = './static/loading.gif'
 
 let renderPictures = (pictures) => {
     pictures.forEach((picture) => {
-
         let card = new Element({
             type: 'div',
             className: 'earth-picture-card'
